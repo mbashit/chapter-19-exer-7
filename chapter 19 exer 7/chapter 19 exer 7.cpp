@@ -6,28 +6,34 @@ and then displays “Good morning NN” or “Good evening NN” or
 be displayed must be chosen randomly*/
 
 #include <iostream>
+#include <string>
+#include <cstdlib>
+
 using namespace std;
+
 
 int main()
 {
+	srand(time(NULL));
 	string Name;
-	int choice;
+	int i;
 
-	cout << "choice is : " << endl;
-	cin >> choice;
 
+	int random = 1 + rand() % 3;
+
+	
 	cout << "enter the user's name:" << endl;
 	cin >> Name;
 
-	switch (choice) {
+	switch (random) {
 	case 1:
-		cout << "1 Good morning " << Name << endl;
+		cout << " Good morning " << Name << endl;
 		break;
 	case 2:
-		cout << "2 Good evening " << Name << endl;
+		cout << " Good evening " << Name << endl;
 		break;
 	case 3 :
-		cout << "3 Good night " << Name << endl;
+		cout << " Good night " << Name << endl;
 	}
 	return 0;
 }
